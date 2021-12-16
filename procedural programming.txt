@@ -1,0 +1,68 @@
+Interest of Procedural Programming
+Solving a complex problem can generate thousands of lines of code.
+Long algorithms, difficult to write, interpret, and maintain.
+Solution:
+Using a new resolution methodology: Procedural Programming
+Idea:
+Divide the complex problem into less complex sub-problems and write each one of them separately within its proper environment.
+
+Benefits:
+Clarity of the algorithm
+A more readable algorithm
+Ease of maintenance
+Reuse of sub-algorithms
+
+
+
+- More about benefits
+
+Let’s create an algorithm that calculates the sum of the successive elements.
+The code below is our first try:
+
+ALGORITHM array_sum_two_element
+VAR
+  tab : ARRAY_OF type[50];
+  i,n : INTEGER; 
+BEGIN
+   // Read the size
+   Read(n);
+   // Read elements
+   FOR i FROM 0 TO n-1 STEP 1  DO
+       Read(tab[i]);
+   END_FOR
+   // Add successive element
+   FOR i FROM 0 TO n-2 STEP 1  DO
+   tab[i] := tab[i]+tab[i+1];
+   END_FOR
+   // Display the array
+   FOR i FROM 0 TO n-1 STEP 1  DO
+       Write(tab[i])
+   END_FOR
+END
+
+This algorithm works fine, but we can optimize it more.
+ALGORITHM array_sum_two_element
+VAR
+  tab : ARRAY_OF type[50];
+  i,n : INTEGER; 
+BEGIN
+   // Read the size
+   Read(n);
+   // Read elements
+   /* *** *** */
+  // Sub-algorithm reading elements of array
+  /* *** *** */
+   // Add successive element
+  // Sub-algorithm calculating successive elements of array
+  /* *** *** */
+   // Dispalay the array
+  // Sub-algorithm displaying elements of array
+   /* *** *** */
+END
+
+
+
+-2 types of sub algorithms:
+Procedure
+Function
+
